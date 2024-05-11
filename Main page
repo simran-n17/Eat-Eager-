@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        #header{
+            background-color: palevioletred;
+            padding: 20px;
+            text-align: center;
+            font-size: large;
+        }
+        .image{
+            display: flex;
+            gap: 100px;
+            background-color: red;
+        }
+        .footer{
+            background-color: #222f3d;
+            color: white;
+            height: 300px;
+            display: flex;
+            justify-content: space-evenly;
+
+        }
+        .button
+        {
+            text-align: right;
+            /*padding-bottom:0%;
+            margin-left: 0%;*/
+            
+            
+        }
+        .ok
+        {
+            background-color: pink;
+        }
+
+        /* New CSS rule to change h1 font color to gray and style to italic */
+        .ok h1 {
+            color: gray;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div id="logo"> <img src="EatEager.png" alt="" width="250" ></div>
+    
+    <p>Something Hot. Something Tasty</p>
+    <div class="button">
+        <button ng-click="redirecttowebsite()" class="button" ng-controller="myctrl">Sign In</button>
+        <button ng-click="redirecttowebsite1()" class="button1" ng-controller="myctrl">Login</button>
+    </div>
+    </div><div class="ok">
+        <h1>&nbsp;&nbsp;&nbsp;Overview</h1>
+        <p><h1>Discover the convenience of delicious meals delivered straight to your doorstep with Eat-Eager. We're your go-to destination for hassle-free dining experiences, offering a wide selection of cuisines from your favorite local restaurants.</h1></p>
+        <div class="image">
+            <img src="indian.avif" alt="" width="520">
+           <img src="chineseChow.jpg" alt="" width="520">
+            <img src="itaian.jpg" alt="" width="520">
+        </div>
+        <p><h1>Discover the convenience of delicious meals delivered straight to your doorstep with Eat-Eager. We're your go-to destination for hassle-free dining experiences, offering a wide selection of cuisines from your favorite local restaurants.</h1></p>
+
+        <div class="footer">
+            <div>
+            <h3>About Us</h3>
+                <ul>
+                    <p>Blogs</p>
+                    <p>About Our Site</p>
+                    <p>Investors Relation</p>
+                    <p>Information</p>
+                    <p>Science</p>
+                </ul>
+            </div>
+            <div>
+               <h3> Policy Information</h3>
+                <ul>
+                    <p>Policy Status</p>
+                    <p>Policy Review</p>
+                    <p>Issues</p>
+                    <p>Eat-Eager Devices</p>
+                    <p>Eat-Eager Science</p>
+                </ul>
+            </div>
+            <div>
+                <h3>Contact Us</h3>
+                <ul>
+                    <p>Email: info@example.com</p>
+                    <p>Phone:+1-123-456-7890</p>
+                </ul>
+               
+            </div>
+        </div>
+    </div>
+    <script>
+        angular.module('myapp',[])
+        .controller('myctrl', function($scope,$window)
+        {
+            $scope.redirecttowebsite = function()
+            {
+                $window.open('project_signup.html', '_blank');
+            }
+
+            $scope.redirecttowebsite1 = function()
+            {
+                $window.open('project.loginup.html', '_blank');
+            }
+        });
+    </script>
+</body>
+</html>
