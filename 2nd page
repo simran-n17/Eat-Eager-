@@ -1,0 +1,157 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Favorite Cuisines</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: gray; /* Change background color to gray */
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  #cuisine-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .cuisine-item {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #eee;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, font-weight 0.3s; /* Added transitions */
+  }
+  
+  .cuisine-item:hover {
+    background-color: #ddd;
+    color: red; /* Change color to red on hover */
+    font-weight: bold; /* Make font bold on hover */
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Choose Your Favorite Cuisines</h1>
+  <ul id="cuisine-list">
+    <li class="cuisine-item"><a href="https://www.italianfood.net/" target="_blank" rel="noopener noreferrer">Italian</a></li>
+    <li class="cuisine-item"><a href="https://www.japan-guide.com/e/e620.html" target="_blank" rel="noopener noreferrer">Japanese</a></li>
+    <li class="cuisine-item"><a href="https://www.mexicancuisine.net/" target="_blank" rel="noopener noreferrer">Mexican</a></li>
+    <li class="cuisine-item"><a href="https://www.indianhealthyrecipes.com/" target="_blank" rel="noopener noreferrer">Indian</a></li>
+    <li class="cuisine-item"><a href="https://www.chinahighlights.com/travelguide/chinese-food/" target="_blank" rel="noopener noreferrer">Chinese</a></li>
+    // Add more cuisines and links as needed
+  </ul>
+</div>
+</body>
+</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Favorite Cuisines</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150vh;
+    background-image: url('food.jpeg'); /* Add your background image URL here */
+    background-size: cover;
+    background-position: center;
+  }
+  /*.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}*/
+  .container {
+    text-align: center;
+    padding: 100px;
+    background-color:palegreen; /* Semi-transparent white background */
+    border-radius: 500px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+  }
+  
+  h1 {
+    color: #333;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); /* Add a text shadow */
+  }
+  
+  #cuisine-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .cuisine-item {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #eee;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, font-weight 0.3s; /* Added transitions */
+    border: 2px solid #333; /* Add a border */
+  }
+  
+
+#moving-text {
+  white-space: nowrap; /* Prevent text from wrapping */
+  position: relative;
+  color: chocolate;
+  animation: moveLeftToRight 10s linear infinite; /* Adjust duration as needed */
+}
+
+@keyframes moveLeftToRight {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+.cuisine-item:hover {
+  background-color:blanchedalmond;
+  color: red; /* Change color to red on hover */
+  font-weight: bold; /* Make font bold on hover */
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div id="moving-text">
+    <h1> Indulge in the romance of Indian, Italian, Japanese, Mexican, Chinese flavors. </h1>
+  </div>
+  <h1>Discover Your Favorite Cuisines</h1>
+  <ul id="cuisine-list">
+    <li class="cuisine-item"><a href="https://www.inghams.co.uk/walking-holidays/insider-guides/italy-food-and-drink-guide" target="_blank" ><h2>Italian</h2></a></li>
+    <li class="cuisine-item"><a href="https://www.japan-guide.com/e/e620.html" target="_blank" ><h2>Japanese</h2></a></li>
+    <li class="cuisine-item"><a href="https://www.mexicancuisine.net/" target="_blank" > <h2>Mexican</h2></a></li>
+    <li class="cuisine-item"><a href="https://www.indianhealthyrecipes.com/" target="_blank" ><h2>Indian</h2></a></li>
+    <li class="cuisine-item"><a href="https://www.chinahighlights.com/travelguide/chinese-food/" target="_blank"><h2>Chinese</h2></a></li>
+    
+  </ul>
+</div>
+</body>
+</html>
