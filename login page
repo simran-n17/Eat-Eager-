@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eat Eager - Sign In</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:black; /* Light yellow background */
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 80%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #f44242; /* Swiggy red color */
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #f44242; /* Swiggy red color */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #e63a3a; /* Darker shade of Swiggy red color */
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+        /* Animation for racing car */
+        .running {
+            position: fixed;
+            bottom: 0;
+            left: -100px; /* Initial position outside the viewport */
+            animation: move_img 10s linear infinite; /* Adjust animation duration as needed */
+            z-index: -1;
+        }
+        @keyframes move_img {
+            0% { left: -100px; } /* Start position */
+            100% { left: calc(100% + 100px); } /* End position (100% + car width) */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Sign In</h2>
+        <form id="loginup" action="#" method="POST">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" required>
+            </div>
+            <div>
+                <label for="phone">Phone:</label>
+                <input type="text" name="phone" id="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Login In</button>
+        </form>
+        <div class="footer">
+            <p>Don't have an account? <a href="project_signup.html">Sign Up</a></p>
+        </div>
+    </div>
+    <img src="EatEager.png" alt="Running" class="running">
+
+    <!--<img src="https://imgs.search.brave.com/i0GgEJP3BIkVSs1c6VoQHUEnGn9h5sajEw29Y59re1c/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9zdGFy/dHVwYXJ0aWNsZS5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MTkvMTEvc3dpZ2d5/LTIuanBn" alt="Racing Car" class="racing-car">-->
+    <script>
+        document.getElementById('loginup').addEventListener('submit',function(event)
+    {
+        event.preventDefault();
+        let username = document.getElementById('username').value;
+        let password = document.getElementById('password').value;
+
+        window.location.href = 'EatEager2.html?username=' + encodeURIComponent(username);
+    });
+    </script>
+</body>
+</html>
